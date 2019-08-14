@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Shiptheory_Dpd>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Shiptheory_Dpd>
+    </modules>
+</config>
