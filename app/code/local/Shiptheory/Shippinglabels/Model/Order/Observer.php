@@ -21,9 +21,9 @@ class Shiptheory_Shippinglabels_Model_Order_Observer
 	public function order($observer)
 	{
 		$order = $observer->getEvent()->getOrder();
-        $data = [
+        $data = array(
 					'order_id'   => $order->getId()
-				];
+				);
 				
 		return $this->queue($order, $data);
 	}
@@ -37,10 +37,10 @@ class Shiptheory_Shippinglabels_Model_Order_Observer
 	public function shipment($observer)
 	{
 		$order = Mage::getModel('sales/order')->load($observer->getEvent()->getShipment()->getOrderId());
-        $data = [
+        $data = array(
 					'order_id'   => $observer->getEvent()->getShipment()->getOrderId(),
 					'shipment_id' => $observer->getEvent()->getShipment()->getIncrementId()
-				];
+				);
 
 		return $this->queue($order, $data);
 	}
