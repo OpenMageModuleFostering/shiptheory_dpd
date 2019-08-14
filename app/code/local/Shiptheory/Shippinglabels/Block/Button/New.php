@@ -15,7 +15,7 @@ class Shiptheory_Shippinglabels_Block_Button_New extends Mage_Adminhtml_Block_Sy
 		->setType('button')
 		->setClass('scalable')
 		->setLabel('Register Free')
-		->setOnClick("setLocation('https://shiptheory.com/integrate/magento/dpd')")
+		->setOnClick("window.open('https://shiptheory.com/integrate/magento/dpd','_blank')")
 		->toHtml();
 
 		return $html;
